@@ -61,3 +61,17 @@ api.amazonclone.joshuachui.net
 - Add screenshots and thumbnails under `assets/images/`
 - Replace the Amazon demo placeholder with an iframe
 - Tune colors/spacing after you finish the Figma design
+
+
+## Data-driven homepage
+
+The homepage project, experience, and skills sections are generated from JavaScript data files:
+
+```text
+data/
+├── projects.js
+├── experience.js
+└── skills.js
+```
+
+Edit those files to add or update homepage content without changing the corresponding HTML markup. Because `script.js` now uses ES modules, run the site through a local HTTP server (for example `python3 -m http.server 8000`) instead of opening `index.html` directly with `file://`.
