@@ -16,10 +16,10 @@ export const projects = [
         title: "Social Distribution",
         year: "2026",
         description:
-            "Distributed social networking platform with inbox federation, remote nodes, visibility rules, comments, likes, and follows.",
+            "Federated social network where independently deployed Django nodes exchange posts, follows, comments, and likes through authenticated inbox APIs.",
         technologies: ["Django", "DRF", "PostgreSQL"],
-        projectPage: "#",
-        liveUrl: "#",
+        projectPage: "projects/socialdistribution.html",
+        liveUrl: "https://node1.social.joshuachui.net",
         liveLabel: "live",
         accent: "purple"
     },

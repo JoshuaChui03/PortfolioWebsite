@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description"
+          content="Social Distribution — a federated social networking platform built with Django and Django REST Framework."/>
+    <title>Social Distribution — Joshua Chui</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body class="project-page">
+<header class="site-header">
+    <div class="container nav">
+        <a class="brand" href="../index.html">joshua.chui<span>.dev</span></a>
+
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+            menu
+        </button>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero section">
+        <div class="container">
+            <div class="eyebrow">
+                <span>// PROJECT 02</span>
+                <span class="muted">2026</span>
+            </div>
+
+            <div class="rule"></div>
+
+            <h1>
+                Social Distribution
+                <span>Federated social networking platform</span>
+            </h1>
+
+            <p class="hero-copy">
+                A Django social network made up of independent nodes that communicate through authenticated REST APIs
+                and per-author inboxes. The portfolio deployment runs two live nodes with separate PostgreSQL databases
+                so cross-node follows, posts, comments, likes, and visibility rules can be demonstrated directly.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary"
+                   href="https://node1.social.joshuachui.net"
+                   target="_blank"
+                   rel="noreferrer">node 1 ↗</a>
+
+                <a class="button"
+                   href="https://node2.social.joshuachui.net"
+                   target="_blank"
+                   rel="noreferrer">node 2 ↗</a>
+
+                <a class="button"
+                   href="https://github.com/JoshuaChui03/SocialDistribution"
+                   target="_blank"
+                   rel="noreferrer">GitHub ↗</a>
+            </div>
+
+            <div class="distributed-demo-heading">
+                <span>// LIVE DISTRIBUTED DEMO</span>
+                <span class="muted">two independent nodes</span>
+            </div>
+
+            <p class="distributed-demo-copy">
+                Use both nodes side by side to see the federation flow. Actions such as follows, posts, comments,
+                likes, and inbox delivery can travel between the independently deployed applications.
+            </p>
+
+            <div class="distributed-demo">
+                <div class="node-demo">
+                    <div class="browser-bar">
+                        <div class="browser-controls" aria-hidden="true">
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                        </div>
+
+                        <span class="browser-address">node1.social.joshuachui.net</span>
+
+                        <a class="browser-open"
+                           href="https://node1.social.joshuachui.net"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="Open Social Distribution Node 1 in a new tab">↗</a>
+                    </div>
+
+                    <iframe
+                            src="https://node1.social.joshuachui.net"
+                            title="Social Distribution Node 1 live demo"
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="node-demo">
+                    <div class="browser-bar">
+                        <div class="browser-controls" aria-hidden="true">
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                        </div>
+
+                        <span class="browser-address">node2.social.joshuachui.net</span>
+
+                        <a class="browser-open"
+                           href="https://node2.social.joshuachui.net"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="Open Social Distribution Node 2 in a new tab">↗</a>
+                    </div>
+
+                    <iframe
+                            src="https://node2.social.joshuachui.net"
+                            title="Social Distribution Node 2 live demo"
+                            loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <h2>01 / OVERVIEW</h2>
+                <div>
+                    <p>
+                        Social Distribution is a federated social-networking platform originally developed as a CMPUT
+                        404 team project at the University of Alberta. Each deployment owns its local authors and data,
+                        while trusted remote nodes exchange social activity through a shared API contract.
+                    </p>
+                    <p>
+                        The portfolio version runs two independently deployed Heroku applications with separate
+                        PostgreSQL databases, seeded demo data, and automated resets so the federation flow can be
+                        explored without affecting a permanent user dataset.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>02 / FEATURES</h2>
+                <div>
+                    <ul>
+                        <li>Local and remote author profiles</li>
+                        <li>Cross-node follows, friendships, and follow requests</li>
+                        <li>Public, unlisted, friends-only, and deleted posts</li>
+                        <li>Comments and likes across trusted nodes</li>
+                        <li>Inbox-based delivery for federated activity</li>
+                        <li>HTTP Basic authentication between nodes</li>
+                        <li>Fully qualified IDs for authors and content</li>
+                        <li>Markdown, image posts, and optional GitHub activity import</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>03 / ARCHITECTURE</h2>
+                <div>
+                    <p>
+                        Node 1 and Node 2 each run Django + Django REST Framework on Heroku with their own PostgreSQL
+                        database. A node remains the source of truth for its local authors and content. Remote objects
+                        are identified with fully qualified URLs, and trusted nodes communicate through authenticated
+                        REST requests and per-author inbox endpoints.
+                    </p>
+                    <p>
+                        Node 1 → authenticated REST / inbox delivery → Node 2<br>
+                        Node 1 ← authenticated REST / inbox delivery ← Node 2
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>04 / MY CONTRIBUTIONS</h2>
+                <div>
+                    <ul>
+                        <li>Remote author search and remote profile handling</li>
+                        <li>HTTP authentication and inbox delivery for federated requests</li>
+                        <li>Entry, comment, like, comment-like, update, and delete inbox flows</li>
+                        <li>Serializer and API endpoint refactoring to better match the project specification</li>
+                        <li>GitHub activity synchronization for local authors</li>
+                        <li>UI consistency, remote-profile fixes, timezone handling, and integration bug fixes</li>
+                        <li>Portfolio embedding support, demo data seeding, and automated demo resets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>05 / CHALLENGES</h2>
+                <div>
+                    <p>
+                        The main challenge was keeping ownership, identity, authentication, and visibility rules
+                        consistent while data crossed node boundaries. A local object could be viewed or acted on by a
+                        remote author, so API behavior had to stay predictable without treating cached remote data as
+                        locally owned data.
+                    </p>
+                    <p>
+                        The project also required careful compatibility work around inbox payloads, fully qualified
+                        URLs, remote profiles, and failure cases so that one node could communicate with another without
+                        assuming both sides shared a database or application state.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>06 / WHAT I LEARNED</h2>
+                <div>
+                    <p>
+                        This project gave me practical experience with distributed application design, REST API
+                        contracts, authentication between services, data ownership, integration testing, and debugging
+                        behavior that spans multiple deployments. Turning it into a portfolio demo also added experience
+                        with production deployment, custom domains, iframe security, seeded environments, and automated
+                        reset workflows.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <h2>07 / TECH STACK</h2>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Django REST Framework</span>
+                    <span>PostgreSQL</span>
+                    <span>REST</span>
+                    <span>JSON</span>
+                    <span>HTTP Basic Auth</span>
+                    <span>Heroku</span>
+                    <span>GitHub Actions</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© 2026 Joshua Chui</span>
+        <a href="../index.html#projects">← back to projects</a>
+    </div>
+</footer>
+
+<script type="module" src="../script.js"></script>
+</body>
+</html>
