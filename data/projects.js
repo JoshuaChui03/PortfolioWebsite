@@ -1,18 +1,6 @@
 export const projects = [
     {
         id: 1,
-        title: "Amazon Clone",
-        year: "2026",
-        description:
-            "Amazon-inspired ecommerce application with guest sessions, cart flows, orders, and a separately deployed API.",
-        technologies: ["JavaScript", "REST API", "Heroku"],
-        projectPage: "projects/amazonclone.html",
-        liveUrl: "https://amazonclone.joshuachui.net",
-        liveLabel: "live",
-        accent: "yellow"
-    },
-    {
-        id: 2,
         title: "Social Distribution",
         year: "2026",
         description:
@@ -20,6 +8,18 @@ export const projects = [
         technologies: ["Django", "DRF", "PostgreSQL"],
         projectPage: "projects/socialdistribution.html",
         liveUrl: "https://node1.social.joshuachui.net",
+        liveLabel: "live",
+        accent: "yellow"
+    },
+    {
+        id: 2,
+        title: "Amazon Clone",
+        year: "2026",
+        description:
+            "Amazon-inspired ecommerce application with guest sessions, cart flows, orders, and a separately deployed API.",
+        technologies: ["JavaScript", "REST API", "Heroku"],
+        projectPage: "projects/amazonclone.html",
+        liveUrl: "https://amazonclone.joshuachui.net",
         liveLabel: "live",
         accent: "purple"
     },
