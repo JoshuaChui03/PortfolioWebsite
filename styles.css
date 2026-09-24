@@ -266,6 +266,10 @@ h1 strong {
     font-size: 9px;
 }
 
+.accent-yellow {
+    border-top-color: var(--accent);
+}
+
 .accent-purple {
     border-top-color: var(--purple);
 }

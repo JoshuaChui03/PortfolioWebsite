@@ -7,7 +7,7 @@ export const projects = [
             "Federated social network where independently deployed Django nodes exchange posts, follows, comments, and likes through authenticated inbox APIs.",
         technologies: ["Django", "DRF", "PostgreSQL"],
         projectPage: "projects/socialdistribution.html",
-        liveUrl: "https://node1.social.joshuachui.net",
+        liveUrl: "https://node1.social.joshuachui.com",
         liveLabel: "live",
         accent: "yellow"
     },
@@ -19,7 +19,7 @@ export const projects = [
             "Amazon-inspired ecommerce application with guest sessions, cart flows, orders, and a separately deployed API.",
         technologies: ["JavaScript", "REST API", "Heroku"],
         projectPage: "projects/amazonclone.html",
-        liveUrl: "https://amazonclone.joshuachui.net",
+        liveUrl: "https://amazonclone.joshuachui.com",
         liveLabel: "live",
         accent: "purple"
     },

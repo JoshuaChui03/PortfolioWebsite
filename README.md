@@ -40,7 +40,7 @@ Search the repo for:
 1. Push the repo to GitHub.
 2. Open **Settings → Pages**.
 3. Deploy from your main branch.
-4. Set the custom domain to `joshuachui.net`.
+4. Set the custom domain to `joshuachui.com`.
 5. Keep the `CNAME` file in the repository.
 
 ## Project pattern
@@ -48,9 +48,9 @@ Search the repo for:
 Use a case-study page on the portfolio and a standalone demo on a subdomain:
 
 ```text
-joshuachui.net/projects/amazonclone.html
-amazonclone.joshuachui.net
-api.amazonclone.joshuachui.net
+joshuachui.com/projects/amazonclone.html
+amazonclone.joshuachui.com
+api.amazonclone.joshuachui.com
 ```
 
 ## Suggested next steps
